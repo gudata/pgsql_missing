@@ -7,9 +7,9 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: ENV['POSTGRES_PORT_5432_TCP_ADDR']
+  host: <%= ENV['POSTGRES_PORT_5432_TCP_ADDR'] %>
   username: postgres
-  password: ENV['POSTGRES_ENV_POSTGRES_PASSWORD']
+  password: <%= ENV['POSTGRES_ENV_POSTGRES_PASSWORD'] %>
 
   pool: 5
   timeout: 5000
