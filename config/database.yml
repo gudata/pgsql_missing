@@ -7,9 +7,9 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: 127.0.0.1
+  host: ENV['POSTGRES_PORT_5432_TCP_ADDR']
   username: postgres
-  password: ''
+  password: ENV['POSTGRES_ENV_POSTGRES_PASSWORD']
 
   pool: 5
   timeout: 5000
